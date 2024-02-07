@@ -7,22 +7,50 @@
 </head>
 <body>
   <script>
-  const product = {
-    name: 'socks',
-    price: 1090
+  // const product = {
+  //   name: 'socks',
+  //   price: 1090
+  // };
+  // console.log(product);
+  // console.log(product.name);
+  // console.log(product.price);
+
+  // product.name = 'cotton socks';
+  // console.log(product);
+
+  // product.newProperty = true;
+  // console.log(product);
+
+  // delete product.newProperty
+  // console.log(product);
+
+  const product2 = {
+    name: 'shirt',
+    ['delivery-time']: '1 day',
+    rating: {
+      stars: 4.5,
+      count: 87       // nested object
+    },
+    fun: function function1() {
+      console.log('function inside object'); // this is called a method(object + function)
+    }
   };
-  console.log(product);
-  console.log(product.name);
-  console.log(product.price);
 
-  product.name = 'cotton socks';
-  console.log(product);
+  // . notation vs [] notation 
+  console.log(product2);
+  console.log(product2.name);
+  console.log(product2['name']);
+  console.log(product2['delivery-time']);
 
-  product.newProperty = true;
-  console.log(product);
+  console.log(product2.rating.count); // to access object within the object
 
-  delete product.newProperty
-  console.log(product);
+  product2.fun();
+
+  console.log(typeof console.log);
+
+  //console and math.random are called built-in objects 
+  // some more examples: JSON & localStorage 
+
   </script>
 </body>
 </html>
