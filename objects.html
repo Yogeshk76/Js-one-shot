@@ -7,22 +7,22 @@
 </head>
 <body>
   <script>
-  // const product = {
-  //   name: 'socks',
-  //   price: 1090
-  // };
-  // console.log(product);
-  // console.log(product.name);
-  // console.log(product.price);
+  const product = {
+    name: 'socks',
+    price: 1090
+  };
+  console.log(product);
+  console.log(product.name);
+  console.log(product.price);
 
-  // product.name = 'cotton socks';
-  // console.log(product);
+  product.name = 'cotton socks';
+  console.log(product);
 
-  // product.newProperty = true;
-  // console.log(product);
+  product.newProperty = true;
+  console.log(product);
 
-  // delete product.newProperty
-  // console.log(product);
+  delete product.newProperty
+  console.log(product);
 
   const product2 = {
     name: 'shirt',
@@ -48,7 +48,7 @@
 
   console.log(typeof console.log);
 
-  //console and math.random are called built-in objects 
+  // console and math.random are called built-in objects 
   // some more examples: JSON & localStorage 
 
   console.log(JSON.stringify(product2));
@@ -57,6 +57,54 @@
   console.log(JSON.parse(jsonString));
 ;
 
+console.log('hello'.length);
+console.log('hello'.toUpperCase());
+// AUTO BOXING 
+// Objects are references
+
+const object1 = {
+  message: 'hello'
+};
+const object2 = object1;
+// copy by refernece
+
+object1.message = 'Good job!';
+console.log(object1);
+console.log(object2);
+
+// can't compare objects directly
+const object3 = {
+  message: 'Good job!'
+};
+
+console.log(object3 === object1);
+
+const object4 = {
+  message: 'Good job!',
+  prive: 799
+};
+
+// shortcut
+// const message = object4.message;
+const { message, price } =object4
+console.log(message);
+console.log(price);
+
+const object5 = {
+  // message: message
+  message,
+  // method: function function1() {
+  //   console.log('method');
+  // }
+
+method() {
+  console.log('method');
+} // shorthand method syntax
+
+
+};
+console.log(object5);
+object5.method();
 
   </script>
 </body>
